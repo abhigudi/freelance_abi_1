@@ -1,0 +1,7 @@
+
+<div class="w-100 h-100 d-flex flex-column ">
+    <div class="px-4 py-3"> {{data.length}} Records found</div>
+    <div class="w-100 h-100 d-flex flex-wrap  overflow-auto">
+        <app-card *ngFor="let user of data" [user]="user" ></app-card>
+    </div>
+</div>

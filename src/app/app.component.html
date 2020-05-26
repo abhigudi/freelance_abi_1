@@ -1,0 +1,20 @@
+<!-- <div class="w-100 h-100 d-flex">
+  <div class="d-flex h-100">leftnav</div>
+  <div class="d-flex flex-column flex-grow-1 h-100">
+    <app-header></app-header>
+    <div>content</div>
+  </div>
+</div> -->
+
+
+<mat-sidenav-container class="w-100 h-100 d-flex">
+  <mat-sidenav mode="side" opened class="h-100">
+    <app-left-nav ></app-left-nav>
+  </mat-sidenav>
+  <mat-sidenav-content class="h-100 flex-grow-1 d-flex flex-column">
+    <app-header class="w-100 shadow-sm"></app-header>
+    <div class="flex-grow-1 w-100 h-100 overflow-auto">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

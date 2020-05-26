@@ -1,0 +1,152 @@
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+    --auto-grid-min-size: 16rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  /*
+    WRAPPER
+    A utility with a max width that contains child elements and horizontal centers them
+  */
+  .wrapper {
+    max-width: 65rem;
+    margin: 0 auto;
+    
+  }
+  
+  
+  /* Presentational styles */
+  
+  
+  
+  li {
+    padding: 5px;
+    border-radius: .3em;
+    border: 1px solid #e2e2e0;
+    list-style: none;
+  }
+  
+
+  .user-profile {
+    margin: auto;
+    
+    background: #fff;
+    
+  }
+  
+  .user-profile .username {
+    float:left;
+    color: #658585;
+    font-size: 16px;
+    font-family: "Coda", sans-serif;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  
+  .user-profile .bio {
+    clear:left;
+    
+    color: #e76043;
+    font-size: 12px;
+    font-family: "varela round", sans-serif;
+  }
+
+
+  
+  .user-profile > .description {    
+    color: #c0c5c5;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  
+  .user-profile > img.avatar {
+    padding: 5px;
+    float:left;
+    height: 4.23em;
+    width: 4.23em;
+    border-radius: 18em;
+  }
+  
+  .user-profile ul.data {
+    padding:10px;
+    clear:left;
+    font-size: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e0;
+  }
+
+  .last {
+    border:none !important; 
+  }
+
+  .rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  
+  }
+  
+  .star-rating-display {
+    unicode-bidi: bidi-override;
+    color: #c5c5c5;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+
+
+    &:before, &:after{
+        content: "★★★★★";
+        display: block;
+        white-space: nowrap;
+    }
+
+    &:before{
+        color: gold;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    &:after{
+        z-index: 0;
+    }
+
+    &[data-rating="1"]:before {
+        width: 20%;
+    }
+    &[data-rating="2"]:before {
+        width: 40%;
+    }
+    &[data-rating="3"]:before {
+        width: 60%;
+    }
+    &[data-rating="4"]:before {
+        width: 80%;
+    }
+    &[data-rating="5"]:before {
+        width: 100%;
+    }
+}
+
+
+  
+  .user-profile li {
+    border: none;
+    display: table-cell;
+    text-align: center;
+  }
+  
+  .user-profile span {
+    
+  }
+
+  

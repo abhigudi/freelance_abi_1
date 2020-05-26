@@ -1,0 +1,11 @@
+<div class="vertical-menu">
+        <a href="#" >Overview</a>
+        <a href="#">Messages</a>
+        <a href="#" (click)="showSearchForm()">Search</a>
+        <a href="#">Filter</a>
+        <a href="#">History</a>
+        <a href="#">My Account</a>
+</div>
+<div *ngIf="showForm" style="float:left;width: 200px">
+        <app-searchform ></app-searchform>  
+</div>

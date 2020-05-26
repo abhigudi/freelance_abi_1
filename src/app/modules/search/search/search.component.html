@@ -1,0 +1,10 @@
+
+<div class="w-100 h-100 d-flex">
+    <div class="h-100 d-flex shadow-sm"> 
+        <app-controls *ngIf="message" [searchFilterFields]="searchFilterFields" (selectedFilter)="onSelectedFilter($event)"></app-controls>
+        <mat-divider class="h-100" [vertical]="true"></mat-divider>
+    </div>
+    <div class="flex-grow-1 h-100 overflow-auto">
+        <app-results [data]="filteredData" ></app-results>
+    </div>
+</div>

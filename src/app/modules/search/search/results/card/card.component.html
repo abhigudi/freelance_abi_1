@@ -1,0 +1,41 @@
+<mat-card class="m-3 searchresult__card--size">
+    <mat-card-header>
+      <div mat-card-avatar [style.background]="user?.image" ></div>
+      <mat-card-title>{{user?.name}}</mat-card-title>
+      <mat-card-subtitle>{{user?.designation}}</mat-card-subtitle>
+      <button mat-icon-button class="ml-auto">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="pb-2 card__row--font">
+            <app-rating ></app-rating>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="py-2 d-flex card__row--font">
+            <div class="cardrow__label--color mr-1">Experience:</div> <div> {{user?.experience}} Years</div>
+            <mat-divider class="mx-2" [vertical]="true" ></mat-divider>
+            <div class="cardrow__label--color mr-1">Date of Joining: </div> <div>{{user?.yearOfJoining}}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="py-2 d-flex card__row--font">
+            <div class="cardrow__label--color mr-1">Current Team:</div> <div>{{user?.team}}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="py-2 d-flex card__row--font">
+            <div class="cardrow__label--color mr-1">Reporting Manager:</div> <div> Lalit Agarwal</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="py-2 d-flex card__row--font align-items-center">
+            <button mat-icon-button class="mr-2 shadow-sm">
+                <mat-icon>phone</mat-icon>
+            </button>
+            <div> {{user?.phoneNumber}}</div>
+        </div>
+
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions> -->
+  </mat-card>

@@ -1,0 +1,51 @@
+
+<div class="w-100 h-100 d-flex flex-column leftNav__container--position">
+    <div class="leftNav_topleft--size">
+            <a class="navbar-brand" href="#">
+                    <img src="./assets/images/Infrrd-Logo.png" width="169" class="d-inline-block align-top" alt="">
+              </a>
+    </div>
+    <mat-list role="list" class="h-100 d-flex flex-column">
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" routerLink="/overview" routerLinkActive="leftnav-item-selected">
+            <mat-icon>dashboard</mat-icon>
+            <div class="ml-2">Overview</div>
+        </mat-list-item>
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" routerLink="/messages" routerLinkActive="leftnav-item-selected">
+            <mat-icon>mail</mat-icon>
+            <div class="ml-2">Messages</div>
+        </mat-list-item>
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" (click)="setflag()" routerLink="/search" routerLinkActive="leftnav-item-selected">
+            <mat-icon>search</mat-icon>
+            <div class="ml-2">Search</div>
+        </mat-list-item>
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" routerLink="/filter" routerLinkActive="leftnav-item-selected">
+            <mat-icon>filter_list</mat-icon>
+            <div class="ml-2">Filter</div>
+        </mat-list-item>
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" routerLink="/history" routerLinkActive="leftnav-item-selected">
+            <mat-icon>history</mat-icon>
+            <div class="ml-2">History</div>
+        </mat-list-item>
+        <mat-list-item role="option" class="mat-list-item cursor-pointer" routerLink="/account" routerLinkActive="leftnav-item-selected">
+            <mat-icon>person</mat-icon>
+            <div class="ml-2">My Account</div>
+        </mat-list-item>
+
+        <mat-list-item role="option" class="mt-auto mat-list-item cursor-pointer" routerLinkActive="leftnav-item-selected">
+            <mat-icon>forum</mat-icon>
+            <div class="ml-2">Get Help</div>
+        </mat-list-item>
+        <mat-list-item role="option" class=" mat-list-item cursor-pointer" routerLinkActive="leftnav-item-selected">
+            <mat-icon>exit_to_app</mat-icon>
+            <div class="ml-2">Logout</div>
+        </mat-list-item>
+      </mat-list>
+      <div class="leftNav_bottomleft--size"></div>
+
+      <div  *ngIf="message" class="leftNav__expandCollapse--position shadow-sm">
+        <button (click)="setflag()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+    </div>
+    
+</div>
